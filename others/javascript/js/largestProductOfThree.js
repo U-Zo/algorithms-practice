@@ -2,7 +2,6 @@ const largestProductOfThree = (arr) => {
   const resultArr = []; // 결과를 담는 배열
 
   const dfs = (index, depth, num) => {
-    console.log(`index = ${index}`, `depth = ${depth}`, `num = ${num}`);
     if (depth > 1) {
       resultArr.push(num);
       return;
@@ -13,7 +12,7 @@ const largestProductOfThree = (arr) => {
     }
   };
 
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length - 2; i++) {
     dfs(i + 1, 0, arr[i]);
   }
 
